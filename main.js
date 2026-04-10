@@ -8,7 +8,8 @@ function createWindow() {
     height: 800
   });
 
-  win.loadURL('https://board.mile.app');
+  //win.loadURL('https://board.mile.app');
+  win.loadFile('login.html');
 
   const template = [
     {
