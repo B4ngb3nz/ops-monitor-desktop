@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login OPS Monitor</title>
+<style>
+body {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:#0f172a;
+  color:white;
+  font-family:Arial;
+}
+.box {
+  background:#1e293b;
+  padding:30px;
+  border-radius:12px;
+  width:300px;
+}
+input {
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border:none;
+  border-radius:6px;
+}
+button {
+  width:100%;
+  padding:10px;
+  background:#3b82f6;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+.error {
+  color:red;
+  font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>OPS Monitor Login</h2>
+  <input type="text" id="user" placeholder="Username">
+  <input type="password" id="pass" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <div class="error" id="error"></div>
+</div>
+
+<script>
+function login() {
+  const u = document.getElementById('user').value;
+  const p = document.getElementById('pass').value;
+
+  // USER LOGIN SEDERHANA (nanti bisa diganti API)
+  if (u === "admin" && p === "12345") {
+    localStorage.setItem("login", "true");
+    window.location.href = "home.html";
+  } else {
+    document.getElementById('error').innerText = "Login salah!";
+  }
+}
+</script>
+
+</body>
+</html>
