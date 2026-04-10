@@ -8,7 +8,7 @@ function createWindow() {
     width: 1200,
     height: 800
   });
-
+  win.maximize();
   //win.loadURL('https://board.mile.app');
   win.loadFile('login.html');
 
